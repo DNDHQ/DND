@@ -127,3 +127,74 @@ body {
   font-size: 18px;
   text-transform: uppercase;
 }
+
+.access-form {
+  width: min(100%, 25rem);
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.password-field {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.password-field input,
+.password-field button {
+  min-height: 3.1rem;
+  border-radius: 0.35rem;
+  font: 600 0.9rem/1 "IBM Plex Mono", monospace;
+}
+
+.password-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 0 1rem;
+  border: 1px solid #b8b8b8;
+  color: #171717;
+  outline: none;
+}
+
+.password-field input:focus {
+  border-color: #e12727;
+  box-shadow: 0 0 0 3px #e1272730;
+}
+
+.password-field button {
+  flex: 0 0 auto;
+  padding: 0 1.1rem;
+  border: 1px solid #e12727;
+  background: #e12727;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.password-field button:hover,
+.password-field button:focus-visible {
+  background: #b71d1d;
+  border-color: #b71d1d;
+}
+
+.access-message {
+  min-height: 1.25rem;
+  margin: 0.65rem 0 0;
+  color: #b71d1d;
+  font: 500 0.75rem/1.4 "IBM Plex Mono", monospace;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 360px) {
+  .password-field {
+    flex-direction: column;
+  }
+}

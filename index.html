@@ -15,6 +15,15 @@
         <img src="images/BURGER.png" alt="DND HQ logo" class="dnd-image">
         <h1 class="ibm-plex-mono-bold">DND HQ</h1>
         <h2 class="ibm-plex-mono-semibold">Website in construction</h2>
+        <form class="access-form" action="/unlock" method="post">
+            <label class="visually-hidden" for="access-password">Access password</label>
+            <div class="password-field">
+                <input id="access-password" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required>
+                <button type="submit">Enter</button>
+            </div>
+            <p class="access-message" aria-live="polite"></p>
+        </form>
     </main>
+    <script src="gate.js"></script>
 </body>
 </html>
