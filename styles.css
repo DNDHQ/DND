@@ -81,3 +81,15 @@
   font-weight: 700;
   font-style: italic;
 }
+
+
+.coming-soon-text {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: red;
+}
+
+h1.coming-soon-text {
+  margin-top: 200px;
+}
