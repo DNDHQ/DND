@@ -110,6 +110,15 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 12px;
+  border-radius: 50%;
+  box-shadow: 0 1rem 2.5rem #0000001f;
+  animation: dnd-spin 12s linear infinite;
+}
+
+@keyframes dnd-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .coming-soon h1,
@@ -196,5 +205,60 @@ body {
 @media (max-width: 360px) {
   .password-field {
     flex-direction: column;
+  }
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5rem;
+  padding: 1rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid #e7e7e7;
+  background: #ffffff;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #171717;
+  font: 700 1.1rem/1 "IBM Plex Mono", monospace;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  color: #171717;
+  font: 600 0.8rem/1 "IBM Plex Mono", monospace;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: #e12727;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dnd-image {
+    animation: none;
   }
 }
