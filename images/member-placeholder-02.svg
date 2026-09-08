@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Jordan placeholder portrait</title>
+  <desc id="desc">An abstract black and red portrait illustration used as a placeholder.</desc>
+  <rect width="640" height="800" fill="#f6f6f6"/>
+  <circle cx="510" cy="155" r="190" fill="#e12727"/>
+  <path d="M0 654 640 420v380H0Z" fill="#171717"/>
+  <circle cx="300" cy="311" r="126" fill="#f6f6f6"/>
+  <path d="M82 800c34-182 106-274 218-274s184 92 218 274Z" fill="#f6f6f6"/>
+  <path d="M238 264h124v56H238z" fill="#171717"/>
+  <path d="M252 370c26 24 58 24 84 0" fill="none" stroke="#171717" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="260" cy="338" r="10" fill="#171717"/>
+  <circle cx="340" cy="338" r="10" fill="#171717"/>
+  <rect x="42" y="40" width="92" height="10" fill="#171717"/>
+  <rect x="42" y="64" width="54" height="10" fill="#171717"/>
+</svg>

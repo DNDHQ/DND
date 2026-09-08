@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Avery placeholder portrait</title>
+  <desc id="desc">An abstract yellow and black portrait illustration used as a placeholder.</desc>
+  <rect width="640" height="800" fill="#f5f0dc"/>
+  <path d="M0 145 640 0v262L0 407Z" fill="#c8a62d"/>
+  <circle cx="320" cy="320" r="126" fill="#171717"/>
+  <path d="M122 800c25-192 104-288 198-288s173 96 198 288Z" fill="#171717"/>
+  <circle cx="275" cy="300" r="12" fill="#f5f0dc"/>
+  <circle cx="365" cy="300" r="12" fill="#f5f0dc"/>
+  <path d="M271 374c29 27 69 27 98 0" fill="none" stroke="#f5f0dc" stroke-width="12" stroke-linecap="round"/>
+  <rect x="40" y="40" width="92" height="10" fill="#171717"/>
+  <rect x="40" y="64" width="54" height="10" fill="#171717"/>
+</svg>
