@@ -301,7 +301,7 @@ body {
   grid-template-columns: minmax(180px, 300px) 1fr;
   align-items: center;
   gap: 1.5rem;
-  padding-left: 150px;
+  padding-inline: clamp(1rem, 8vw, 150px);
 }
 
 .member-image {
