@@ -134,7 +134,7 @@ if (launchAccessLink && launchModal) {
   launchForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (matchesCode(launchInput.value, [109, 97, 103, 105, 107, 97, 102, 97, 116, 101, 100, 116, 105, 109, 101, 97, 115, 99, 105, 101, 110, 99, 105, 111, 110])) {
+    if (matchesCode(launchInput.value, [109, 97, 103, 105, 107, 97, 115, 102, 97, 116, 101, 100, 97, 115, 99, 101, 110, 115, 105, 111, 110])) {
       window.location.href = "test-dev.html";
       return;
     }
