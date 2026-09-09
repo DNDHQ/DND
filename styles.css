@@ -91,6 +91,7 @@ body {
   margin: 0;
   background: #ffffff;
   color: #171717;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .coming-soon {
@@ -134,77 +135,6 @@ body {
   margin-top: 0.9rem;
   font-size: 18px;
   text-transform: uppercase;
-}
-
-.access-form {
-  width: min(100%, 25rem);
-  margin-top: clamp(28px, 4vw, 40px);
-}
-
-.password-field {
-  display: flex;
-  gap: 8px;
-}
-
-.password-field input,
-.password-field button {
-  min-height: 49.6px;
-  border-radius: 5.6px;
-  font: 600 0.9rem/1 "IBM Plex Mono", monospace;
-}
-
-.password-field input {
-  width: 100%;
-  min-width: 0;
-  padding: 0 16px;
-  border: 1px solid #b8b8b8;
-  color: #171717;
-  outline: none;
-}
-
-.password-field input:focus {
-  border-color: #e12727;
-  box-shadow: 0 0 0 3px #e1272730;
-}
-
-.password-field button {
-  flex: 0 0 auto;
-  padding: 0 17.6px;
-  border: 1px solid #e12727;
-  background: #e12727;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.password-field button:hover,
-.password-field button:focus-visible {
-  background: #b71d1d;
-  border-color: #b71d1d;
-}
-
-.access-message {
-  min-height: 20px;
-  margin: 10.4px 0 0;
-  color: #b71d1d;
-  font: 500 0.75rem/1.4 "IBM Plex Mono", monospace;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (max-width: 360px) {
-  .password-field {
-    flex-direction: column;
-  }
 }
 
 .site-header {
@@ -292,8 +222,83 @@ body {
 }
 
 .yoruichi {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
   text-align: center;
-  padding: 75px;
+}
+
+.yoruichi-section h1 {
+  margin: 0;
+}
+
+.yoruichi-section p {
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+.yoruichi-image {
+  display: block;
+  width: min(100%, 32rem);
+  height: auto;
+  margin: 2rem auto 0;
+}
+
+.members-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(3rem, 8vw, 5rem) 1rem 2rem;
+  text-align: center;
+}
+
+.members-heading {
+  margin: 0;
+}
+
+.members-intro p {
+  margin: 0.75rem 0 0;
+}
+
+.member-grid {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+.yoruichi-link {
+  display: block;
+  width: min(100%, 6rem);
+  margin: 0 auto 4rem;
+  color: #171717;
+  text-decoration: none;
+}
+
+.cat-silhouette {
+  display: block;
+  width: 4rem;
+  height: 5rem;
+  object-fit: contain;
+  margin: auto;
+  opacity: 0.18;
+  transition: transform 160ms ease;
+}
+
+.yoruichi-link:hover .cat-silhouette,
+.yoruichi-link:focus-visible .cat-silhouette {
+  opacity: 0.45;
+  transform: translateY(-0.35rem);
+}
+
+.yoruichi-link:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-silhouette {
+    transition: none;
+  }
 }
 
 .member-card {
@@ -312,6 +317,41 @@ body {
   object-fit: cover;
 }
 
+.member-social {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid #d2d2d2;
+  border-radius: 4px;
+  background: transparent;
+  color: #171717;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, border-color 160ms ease,
+    color 160ms ease, transform 160ms ease;
+}
+
+.member-social:hover,
+.member-social:focus-visible {
+  border-color: #171717;
+  background: #171717;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.member-social:focus-visible {
+  outline: 2px solid #17171766;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .member-social {
+    transition: none;
+  }
+}
+
 @media (max-width: 600px) {
   .member-card {
     grid-template-columns: 1fr;
@@ -321,3 +361,4 @@ body {
     height: auto;
   }
 }
+
