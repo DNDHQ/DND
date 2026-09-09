@@ -11,6 +11,13 @@
     <meta property="og:description" content="A special MAGIKA'S page celebrating Yoruichi Yams.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
+    <script>
+        if (sessionStorage.getItem("magikasYoruichiAccess") !== "granted") {
+            window.location.replace("../");
+        } else {
+            sessionStorage.removeItem("magikasYoruichiAccess");
+        }
+    </script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" type="image/png" href="../images/BURGER.png">
 </head>

@@ -93,6 +93,7 @@ if (yoruichiLink && accessModal) {
     event.preventDefault();
 
     if (matchesCode(accessInput.value, [121, 111, 114, 117, 105, 99, 104, 105, 103, 111, 116, 121, 97, 109, 115])) {
+      sessionStorage.setItem("magikasYoruichiAccess", "granted");
       window.location.href = yoruichiLink.href;
       return;
     }
@@ -134,7 +135,7 @@ if (launchAccessLink && launchModal) {
     event.preventDefault();
 
     if (matchesCode(launchInput.value, [109, 97, 103, 105, 107, 97, 102, 97, 116, 101, 100, 116, 105, 109, 101, 97, 115, 99, 105, 101, 110, 99, 105, 111, 110])) {
-      window.location.href = "members/";
+      window.location.href = "test-dev.html";
       return;
     }
 
