@@ -9,7 +9,7 @@ const matchesCode = (value, expectedCharacters) => {
   return expectedCharacters.every((character, index) => value.charCodeAt(index) === character);
 };
 
-const countdownTarget = Date.UTC(2026, 8, 14, 8, 0, 0);
+const countdownTarget = Date.parse("2026-09-14T00:00:00-07:00");
 const countdownParts = {
   days: document.querySelector("#countdown-days"),
   hours: document.querySelector("#countdown-hours"),
