@@ -111,6 +111,31 @@ p {
   backdrop-filter: blur(1rem);
 }
 
+.install-app {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  color: var(--plum);
+  cursor: pointer;
+  font: 600 0.68rem/1 var(--mono);
+  text-transform: uppercase;
+}
+
+.install-app:hover,
+.install-app:focus-visible {
+  border-color: var(--plum);
+  background: var(--plum);
+  color: #ffffff;
+}
+
+.launch-page .install-app {
+  justify-self: center;
+}
+
 body:has(.site-header) {
   padding-top: 5rem;
 }
@@ -606,6 +631,61 @@ a:focus-visible {
   .site-header {
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  .is-ios body:has(.site-header) {
+    padding-top: 1rem;
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
+  }
+
+  .is-ios .site-header {
+    top: auto;
+    right: 0.75rem;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    left: 0.75rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    min-height: 4.5rem;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #ffffff52;
+    border-radius: 999px;
+    background: #ffffff2e;
+    box-shadow: 0 0.75rem 2rem #321b4522;
+    backdrop-filter: blur(1.5rem) saturate(1.4);
+    -webkit-backdrop-filter: blur(1.5rem) saturate(1.4);
+  }
+
+  .is-ios .nav-logo {
+    display: none;
+  }
+
+  .is-ios .site-nav {
+    width: 100%;
+  }
+
+  .is-ios .site-nav ul {
+    gap: 0.15rem;
+    justify-content: space-between;
+    padding: 0;
+    border: 0;
+  }
+
+  .is-ios .site-nav a {
+    min-width: 3.5rem;
+    padding: 0.7rem 0.25rem;
+    border-radius: 0.85rem;
+    text-align: center;
+    font-size: 0.58rem;
+  }
+
+  .is-ios .site-nav a[aria-current="page"] {
+    background: #55296ed9;
+    box-shadow: 0 0.35rem 0.8rem #55296e2b;
+  }
+
+  .is-ios .install-app {
+    display: none;
   }
 
   .site-nav {
