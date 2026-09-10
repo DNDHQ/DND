@@ -10,52 +10,6 @@ if (isIos) {
   document.documentElement.classList.add("is-ios");
 }
 
-let deferredInstallPrompt;
-
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  deferredInstallPrompt = event;
-
-  const installButton = document.querySelector(".install-app");
-  if (installButton) installButton.hidden = false;
-});
-
-window.addEventListener("appinstalled", () => {
-  deferredInstallPrompt = null;
-  const installButton = document.querySelector(".install-app");
-  if (installButton) installButton.hidden = true;
-});
-
-const registerInstallButton = () => {
-  const installTarget = document.querySelector(".site-header") || document.querySelector(".launch-page");
-  if (!installTarget || isIos || window.matchMedia("(display-mode: standalone)").matches) return;
-
-  const installButton = document.createElement("button");
-  installButton.className = "install-app";
-  installButton.type = "button";
-  installButton.hidden = true;
-  installButton.textContent = "Install";
-  installButton.addEventListener("click", async () => {
-    if (!deferredInstallPrompt) return;
-
-    deferredInstallPrompt.prompt();
-    await deferredInstallPrompt.userChoice;
-    deferredInstallPrompt = null;
-    installButton.hidden = true;
-  });
-  installTarget.append(installButton);
-};
-
-registerInstallButton();
-
-const scriptUrl = document.currentScript ? new URL(document.currentScript.src) : null;
-if ("serviceWorker" in navigator && scriptUrl) {
-  const siteRoot = new URL("./", scriptUrl);
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register(new URL("sw.js", siteRoot), { scope: siteRoot.pathname });
-  });
-}
-
 const matchesCode = (value, expectedCharacters) => {
   if (value.length !== expectedCharacters.length) return false;
 

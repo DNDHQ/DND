@@ -111,31 +111,6 @@ p {
   backdrop-filter: blur(1rem);
 }
 
-.install-app {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.2rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.5rem 0.75rem;
-  background: var(--surface);
-  color: var(--plum);
-  cursor: pointer;
-  font: 600 0.68rem/1 var(--mono);
-  text-transform: uppercase;
-}
-
-.install-app:hover,
-.install-app:focus-visible {
-  border-color: var(--plum);
-  background: var(--plum);
-  color: #ffffff;
-}
-
-.launch-page .install-app {
-  justify-self: center;
-}
-
 body:has(.site-header) {
   padding-top: 5rem;
 }
@@ -711,10 +686,6 @@ a:focus-visible {
   .is-ios .site-nav a[aria-current="page"] {
     background: #55296e8c;
     box-shadow: 0 0.35rem 0.8rem #55296e2b;
-  }
-
-  .is-ios .install-app {
-    display: none;
   }
 
   .site-nav {
