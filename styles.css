@@ -297,7 +297,13 @@ a:focus-visible {
   line-height: 0.98;
 }
 
-.members-intro p,
+.members-intro p {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font: 400 clamp(0.95rem, 1.5vw, 1.15rem)/1.7 var(--sans);
+}
+
 .yoruichi-section p {
   max-width: 42rem;
   margin: 1.5rem auto 0;
