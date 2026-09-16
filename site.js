@@ -56,7 +56,7 @@ document.querySelectorAll(".site-nav a").forEach((link) => {
 });
 
 const revealItems = document.querySelectorAll(
-  ".home-copy, .feature-intro, .feature-item, .members-intro, .member-card, .yoruichi-section"
+  ".home-copy, .home-hero-content, .home-section-heading, .release-card, .journal-card, .feature-intro, .feature-item, .members-intro, .member-card, .yoruichi-section"
 );
 
 if ("IntersectionObserver" in window) {
@@ -76,6 +76,18 @@ if ("IntersectionObserver" in window) {
 
   revealItems.forEach((item) => revealObserver.observe(item));
 }
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const controls = carousel.closest(".releases-section")?.querySelectorAll("[data-carousel-direction]");
+  const scrollAmount = () => carousel.clientWidth * 0.82;
+
+  controls?.forEach((control) => {
+    control.addEventListener("click", () => {
+      const direction = control.dataset.carouselDirection === "next" ? 1 : -1;
+      carousel.scrollBy({ left: direction * scrollAmount(), behavior: "smooth" });
+    });
+  });
+});
 
 const yoruichiLink = document.querySelector(".yoruichi-link");
 const accessModal = document.querySelector("#yoruichi-modal");
